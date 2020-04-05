@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/addtips"
+        android:title="Add Tips" />
+
+    <item
+        android:id="@+id/addproblem"
+        android:title="Add Problem" />
+
+    <item
+        android:id="@+id/addcontest"
+        android:title="Add Contest" />
+
+</menu>

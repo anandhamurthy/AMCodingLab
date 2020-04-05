@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAnswer"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/answer_profile_image"
+                android:layout_width="40dp"
+                android:layout_centerVertical="true"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/profile_placeholder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:id="@+id/answer_name"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@id/answer_profile_image"
+                android:fontFamily="@font/roboto_mono_medium"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_below="@+id/answer_name"
+                android:id="@+id/answer_date"
+                android:layout_toEndOf="@id/answer_profile_image"
+                android:fontFamily="@font/roboto_mono"
+                android:textColor="@color/colorBlack"
+                android:textSize="10sp" />
+
+            <ImageView
+                android:id="@+id/answer_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="15dp"
+                app:srcCompat="@drawable/more" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/roboto_mono"
+            android:id="@+id/answer_language"
+            android:textColor="@color/colorBlack" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:id="@+id/image"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/answer_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintDimensionRatio="1:1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <br.tiagohm.codeview.CodeView
+                android:id="@+id/answer_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cv_font_size="14"
+                android:layout_below="@+id/image"
+                app:cv_show_line_number="true"
+                app:cv_start_line_number="1"
+                app:cv_wrap_line="true"
+                app:cv_zoom_enable="false"/>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/roboto_mono"
+            android:id="@+id/answer_explanation"
+            android:textColor="@color/colorBlack" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/white" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/answer_like"
+                android:layout_width="25dp"
+                android:layout_centerVertical="true"
+                android:layout_height="25dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/heart_out" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/answer_like_count"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@id/answer_like"
+                android:fontFamily="@font/roboto_mono_medium"
+                android:textColor="@color/colorBlack"
+                android:textSize="10sp" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

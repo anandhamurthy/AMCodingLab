@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/profile_details"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_profile_image"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/image_placeholder" />
+
+                <TextView
+                    android:id="@+id/profile_edit_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profile_profile_image"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/roboto_mono"
+                    android:text="Edit Profile"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp" />
+
+
+                <TextView
+                    android:id="@+id/profile_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:fontFamily="@font/roboto_mono"
+                    android:text="Name"
+                    android:inputType="textCapWords"
+                    android:layout_below="@+id/profile_edit_profile"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18dp" />
+
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/profile_layout_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_details"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_mono_medium"
+                        android:text="My Tips"
+                        android:textColor="@android:color/black"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/profile_tips_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_mono"
+                        android:gravity="center"
+                        android:paddingTop="5dp"
+                        android:text="0"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorAccent"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_mono_medium"
+                        android:text="My Contests"
+                        android:textColor="@android:color/black"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/profile_contests_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_mono"
+                        android:gravity="center"
+                        android:paddingTop="5dp"
+                        android:text="0"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorAccent"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_mono_medium"
+                        android:text="My Programs"
+                        android:textColor="@android:color/black"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/profile_programs_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_mono"
+                        android:gravity="center"
+                        android:paddingTop="5dp"
+                        android:text="0"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorContest"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/contests_profile_image"
+                android:layout_width="40dp"
+                android:layout_centerVertical="true"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/profile_placeholder" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:id="@+id/contests_name"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@id/contests_profile_image"
+                android:fontFamily="@font/roboto_mono_medium"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_below="@+id/contests_name"
+                android:id="@+id/contests_company_name"
+                android:layout_toEndOf="@id/contests_profile_image"
+                android:fontFamily="@font/roboto_mono"
+                android:textColor="@color/colorBlack"
+                android:textSize="10sp" />
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_below="@+id/contests_company_name"
+                android:id="@+id/contests_date"
+                android:layout_toEndOf="@id/contests_profile_image"
+                android:fontFamily="@font/roboto_mono"
+                android:textColor="@color/colorBlack"
+                android:textSize="10sp" />
+
+            <ImageView
+                android:id="@+id/contests_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="15dp"
+                app:srcCompat="@drawable/more" />
+            
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/white" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/contests_image"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1:1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:autoLink="web"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/roboto_mono"
+            android:id="@+id/contests_web"
+            android:textColor="@color/colorBlack" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_margin="5dp"
+            android:id="@+id/contests_desc"
+            android:fontFamily="@font/roboto_mono"
+            android:textColor="@color/colorBlack" />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AMCodingLab</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="tab_text_1">Tips</string>
+    <string name="tab_text_2">Contests</string>
+    <string name="tab_text_3">Inter Act</string>
+    <string name="admob_app_id">ca-app-pub-2896438943714583~2545034371</string>
+    <string name="interstitial_full_screen">ca-app-pub-2896438943714583/6101136001</string>
+    <string name="banner_home_footer">ca-app-pub-2896438943714583/4979626028</string>
+</resources>

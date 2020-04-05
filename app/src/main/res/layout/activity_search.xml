@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchActivity">
+
+
+    <androidx.appcompat.widget.SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:id="@+id/search"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/search_list"
+        android:layout_margin="5dp"
+        android:visibility="invisible"
+        android:layout_below="@+id/search"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:id="@+id/no_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/roboto_mono_medium"
+            android:gravity="center"
+            android:text="No Activity Found"
+            android:textColor="@color/colorAccent"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

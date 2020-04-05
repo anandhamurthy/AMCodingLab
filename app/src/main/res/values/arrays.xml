@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Program_Language">
+        <item>Java</item>
+        <item>Python</item>
+        <item>C</item>
+        <item>C++</item>
+        <item>Kotlin</item>
+        <item>Javascript</item>
+        <item>R</item>
+        <item>Ruby</item>
+        <item>Monkey</item>
+        <item>Arduino</item>
+        <item>HTML</item>
+        <item>Django</item>
+        <item>PHP</item>
+        <item>XML</item>
+        <item>SQL</item>
+    </string-array>
+
+
+    <string-array name="Profession">
+        <item>Student</item>
+        <item>Teacher</item>
+        <item>Software Engineer</item>
+        <item>Analyst</item>
+        <item>Developer</item>
+    </string-array>
+</resources>

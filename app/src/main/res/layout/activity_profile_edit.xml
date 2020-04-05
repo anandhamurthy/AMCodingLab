@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_edit_profile_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/profile_image" />
+
+            <TextView
+                android:id="@+id/profile_edit_change_profile_image_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_edit_profile_image"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/roboto_mono"
+                android:text="Change Photo"
+                android:textColor="@color/colorPrimary"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/profile_edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:fontFamily="@font/roboto_mono"
+                android:text="Name"
+                android:inputType="textCapWords"
+                android:textColor="@color/colorBlack"
+                android:layout_below="@+id/profile_edit_change_profile_image_text"
+                android:textSize="18dp" />
+
+
+            <TextView
+                android:id="@+id/profile_edit_email_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_edit_name"
+                android:fontFamily="@font/roboto_mono"
+                android:hint="Email Address"
+                android:textColor="@color/colorBlack"
+                android:textSize="18dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/profession_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_edit_email_address">
+
+                <AutoCompleteTextView
+                    android:id="@+id/profile_edit_profession"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_mono"
+                    android:hint="Profession"
+                    android:inputType="textCapWords"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/github_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profession_text">
+
+                <EditText
+                    android:id="@+id/profile_edit_github"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_mono"
+                    android:hint="Github Profile URL"
+                    android:inputType="text"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/place_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/github_text">
+
+                <EditText
+                    android:id="@+id/profile_edit_place"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_mono"
+                    android:hint="Place"
+                    android:inputType="textCapWords"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:weightSum="3"
+                android:layout_below="@+id/place_text"
+                android:id="@+id/edit_profile_sex"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:text="Male"
+                    android:textSize="18dp"
+                    android:checked="true"
+                    android:id="@+id/edit_profile_male"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/roboto_mono"
+                    android:layout_height="wrap_content"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:text="Female"
+                    android:textSize="18dp"
+                    android:id="@+id/edit_profile_female"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/roboto_mono"
+                    android:layout_height="wrap_content"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:text="Others"
+                    android:textSize="18dp"
+                    android:layout_weight="1"
+                    android:id="@+id/edit_profile_others"
+                    android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/roboto_mono"
+                    android:layout_height="wrap_content"/>
+
+            </RadioGroup>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/profile_edit_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="28dp"
+            android:src="@drawable/save"
+            app:borderWidth="0dp"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp" />
+    </LinearLayout>
+
+</RelativeLayout>

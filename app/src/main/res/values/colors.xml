@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5EE7E7</color>
+    <color name="colorPrimaryDark">#89E7C9</color>
+    <color name="colorAccent">#FCE14A</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+
+    <color name="colorTips">#F9E79F</color>
+    <color name="colorContest">#82E0AA</color>
+    <color name="colorProgram">#F0F3F4</color>
+    <color name="colorAnswer">#FBFCFC</color>
+</resources>

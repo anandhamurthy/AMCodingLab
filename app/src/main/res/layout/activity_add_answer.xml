@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddAnswerActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/question"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorProgram"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Problem Statement"
+                        android:fontFamily="@font/roboto_mono_medium"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="18sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/add_answer_statement"
+                        android:layout_margin="5dp"
+                        android:fontFamily="@font/roboto_mono"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"
+                        android:layout_margin="5dp"
+                        android:id="@+id/add_answer_desc"
+                        android:textColor="@color/colorBlack" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <AutoCompleteTextView
+                android:id="@+id/language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/question"
+                android:fontFamily="@font/roboto_mono"
+                android:hint="Language"
+                android:inputType="textCapWords"
+                android:layout_margin="5dp"
+                android:textSize="20dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/add_solution"
+                android:layout_below="@+id/language"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:id="@+id/add_solution_image"
+                    android:src="@drawable/add_image"/>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_solution_editor"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/editor"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/add"
+                    android:background="@drawable/image_placeholder" />
+
+                <br.tiagohm.codeview.CodeView
+                    android:id="@+id/code_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cv_font_size="14"
+                    android:layout_below="@+id/image"
+                    app:cv_show_line_number="true"
+                    app:cv_start_line_number="1"
+                    app:cv_wrap_line="true"
+                    app:cv_zoom_enable="false"/>
+            </RelativeLayout>
+
+
+            <EditText
+                android:id="@+id/explanation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/roboto_mono"
+                android:hint="Explanation"
+                android:inputType="textCapWords|textMultiLine"
+                android:layout_margin="5dp"
+                android:paddingLeft="5dp"
+                android:textSize="20dp" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="28dp"
+            android:src="@drawable/done"
+            app:borderWidth="0dp"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp" />
+    </LinearLayout>
+
+</RelativeLayout>

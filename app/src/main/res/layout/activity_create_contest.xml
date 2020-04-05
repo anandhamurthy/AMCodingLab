@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent"
+    tools:context=".CreateProgramActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/profile_placeholder" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:id="@+id/title"
+                    android:hint="Context title"
+                    android:inputType="textCapWords"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/profile_image"
+                    android:fontFamily="@font/roboto_mono_medium"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:layout_marginStart="12dp"
+                    android:layout_below="@+id/title"
+                    android:id="@+id/organization_name"
+                    android:hint="Organization Name"
+                    android:layout_toEndOf="@id/profile_image"
+                    android:fontFamily="@font/roboto_mono_medium"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/darker_gray" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@drawable/image_placeholder"
+                    android:src="@drawable/add"
+                    app:layout_constraintDimensionRatio="1:1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:autoLink="web"
+                android:fontFamily="@font/roboto_mono"
+                android:hint="Website"
+                android:inputType="text"
+                android:layout_margin="5dp"
+                android:id="@+id/web"
+                android:textColor="@color/colorBlack" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:fontFamily="@font/roboto_mono"
+                android:hint="Description"
+                android:inputType="textCapWords"
+                android:maxLength="100"
+                android:layout_margin="5dp"
+                android:id="@+id/desc"
+                android:textColor="@color/colorBlack" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/login_buttons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="28dp"
+            android:src="@drawable/save"
+            app:borderWidth="0dp"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp" />
+    </LinearLayout>
+
+
+</RelativeLayout>

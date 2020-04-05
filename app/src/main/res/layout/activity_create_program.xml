@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent"
+    tools:context=".CreateProgramActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="5dp">
+            <EditText
+                android:id="@+id/statement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/roboto_mono"
+                android:hint="Problem Statement"
+                android:inputType="text"
+                android:layout_margin="5dp"
+                android:paddingLeft="5dp"
+                android:textSize="20dp" />
+
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:fontFamily="@font/roboto_mono"
+                android:drawablePadding="10dp"
+                android:hint="Problem Description"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:paddingLeft="5dp"
+                android:inputType="textCapWords|textMultiLine" />
+
+            <AutoCompleteTextView
+                android:id="@+id/language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/roboto_mono"
+                android:hint="Code Language"
+                android:inputType="textCapWords"
+                android:layout_margin="5dp"
+                android:paddingLeft="5dp"
+                android:textSize="20dp" />
+
+            <Switch
+                android:id="@+id/need_solution"
+                android:layout_width="match_parent"
+                android:fontFamily="@font/roboto_mono"
+                android:layout_margin="5dp"
+                android:textSize="18dp"
+                android:layout_height="wrap_content"
+                android:text="Need Solution" />
+
+            <TextView
+                android:id="@+id/add_solution_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_mono"
+                android:text="Add Solution"
+                android:textColor="@color/colorBlack"
+                android:layout_margin="5dp"
+                android:textSize="18dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/add_solution"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:id="@+id/add_solution_image"
+                    android:src="@drawable/add_image"/>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/add_solution_editor"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/editor"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/add"
+                    android:background="@drawable/image_placeholder" />
+
+
+                <br.tiagohm.codeview.CodeView
+                    android:id="@+id/code_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cv_font_size="14"
+                    android:layout_below="@+id/image"
+                    app:cv_show_line_number="true"
+                    app:cv_start_line_number="1"
+                    app:cv_wrap_line="true"
+                    app:cv_zoom_enable="false"/>
+            </RelativeLayout>
+
+
+            <EditText
+                android:id="@+id/explanation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/roboto_mono"
+                android:hint="Explanation"
+                android:inputType="textCapWords|textMultiLine"
+                android:layout_margin="5dp"
+                android:paddingLeft="5dp"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="3dp"
+                android:hint="Name"
+                android:gravity="end"
+                android:fontFamily="@font/roboto_mono"
+                android:textColor="@color/colorBlack"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="28dp"
+            android:src="@drawable/save"
+            app:borderWidth="0dp"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp" />
+    </LinearLayout>
+
+
+</RelativeLayout>

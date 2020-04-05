@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnswerActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/question"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorProgram"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/answer_profile_image"
+                    android:layout_width="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/profile_placeholder" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:id="@+id/answer_statement"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/answer_profile_image"
+                    android:fontFamily="@font/roboto_mono_medium"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_below="@+id/answer_statement"
+                    android:id="@+id/answer_date"
+                    android:layout_toEndOf="@id/answer_profile_image"
+                    android:fontFamily="@font/roboto_mono_medium"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_below="@+id/answer_date"
+                    android:id="@+id/answer_language"
+                    android:layout_toEndOf="@id/answer_profile_image"
+                    android:fontFamily="@font/roboto_mono_medium"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:layout_margin="5dp"
+                android:id="@+id/answer_desc"
+                android:textColor="@color/colorBlack" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/image"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/answer_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        app:layout_constraintDimensionRatio="1:1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <br.tiagohm.codeview.CodeView
+                    android:id="@+id/answer_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cv_font_size="14"
+                    android:layout_below="@+id/image"
+                    app:cv_show_line_number="true"
+                    app:cv_start_line_number="1"
+                    app:cv_wrap_line="true"
+                    app:cv_zoom_enable="false"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:layout_margin="5dp"
+                android:id="@+id/answer_explanation"
+                android:fontFamily="@font/roboto_mono"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/roboto_mono"
+                android:gravity="end"
+                android:id="@+id/answer_user_name"
+                android:textColor="@color/colorBlack" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/question"
+        android:id="@+id/answers_list"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:text="Answer"
+        android:textColor="@color/colorWhite"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/roboto_mono"
+        android:id="@+id/answer_add_answer"
+        android:background="@color/colorPrimary"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

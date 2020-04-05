@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent"
+    tools:context=".CreateProgramActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="5dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/profile_image"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/profile_placeholder" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:id="@+id/title"
+                            android:hint="Title"
+                            android:layout_marginTop="5dp"
+                            android:inputType="textCapWords"
+                            android:layout_toEndOf="@id/profile_image"
+                            android:fontFamily="@font/roboto_mono_medium"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="18sp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/add_tip"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:id="@+id/add_tip_image"
+                            android:src="@drawable/add_image"/>
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/add_tip_editor"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/editor"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/image"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/add"
+                            android:background="@drawable/image_placeholder" />
+
+                        <br.tiagohm.codeview.CodeView
+                            android:id="@+id/code_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cv_font_size="14"
+                            android:layout_below="@+id/image"
+                            app:cv_show_line_number="true"
+                            app:cv_start_line_number="1"
+                            app:cv_wrap_line="true"
+                            app:cv_zoom_enable="false"/>
+                    </RelativeLayout>
+
+
+                    <EditText
+                        android:id="@+id/explanation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:hint="Explanation"
+                        android:inputType="textCapWords"
+                        android:fontFamily="@font/roboto_mono"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:hint="Name"
+                        android:gravity="end"
+                        android:fontFamily="@font/roboto_mono"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15dp" />
+
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="28dp"
+            android:src="@drawable/save"
+            app:borderWidth="0dp"
+            app:elevation="6dp"
+            app:pressedTranslationZ="12dp" />
+    </LinearLayout>
+
+
+</RelativeLayout>
